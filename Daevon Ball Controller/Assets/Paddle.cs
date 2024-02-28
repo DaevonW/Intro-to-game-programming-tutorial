@@ -63,6 +63,6 @@ public class Paddle: MonoBehaviour
         }
     void Player2Control()
     {
-        //Debug.Log("is player 2");
+        //Debug.Log("is player2");
     }
 

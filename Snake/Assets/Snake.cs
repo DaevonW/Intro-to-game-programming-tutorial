@@ -15,6 +15,8 @@ public class Snake : MonoBehaviour
     bool ate = false;
     public GameObject tailPrefab;
 
+    public GameManager myManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,15 @@ public class Snake : MonoBehaviour
             dir = Vector3.down;
          
         }
+        else if ((Input.GetKey(KeyCode.UpArrow)))
+            {
+            dir = Vector3.up;
+        }
+        else if ((Input.GetKey(KeyCode.RightArrow)))
+        {
+            dir = Vector3.right;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -72,6 +83,24 @@ public class Snake : MonoBehaviour
 
             //Debug.Log("food eaten");
             Destroy(collision.gameObject); //Remove the Food
+            //change score
+            myManager.FoodEaten();
+        }
+        else if (collision.gameObject.name == "Right Wall")
+        {
+            dir = Vector3.left;
+        }
+        else if (collision.gameObject.name == "Left Wall")
+        {
+            dir = Vector3.right;
+        }
+        else if (collision.gameObject.name == "Bottom Wall")
+        {
+            dir = Vector3.up;
+        }
+        else if (collision.gameObject.name == "Top Wall")
+        {
+            dir = Vector3.down;
         }
     }
 }

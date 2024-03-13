@@ -20,7 +20,7 @@ public class Snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MoveSnake", 0.3f, 0.3f);
+        InvokeRepeating("MoveSnake", 0.1f, 0.1f); //Make Snake move faster
     }
 
     // Update is called once per frame

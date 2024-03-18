@@ -16,7 +16,7 @@ public class Snake : MonoBehaviour
     public GameObject tailPrefab;
 
     public GameManager myManager;
-
+     
     // Start is called before the first frame update
     void Start()
     {

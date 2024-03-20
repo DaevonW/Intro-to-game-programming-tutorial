@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 753123273}
   - component: {fileID: 753123272}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Triangle Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -526,7 +526,8 @@ Transform:
   m_LocalPosition: {x: 0.11319187, y: 6.500017, z: 0}
   m_LocalScale: {x: 7.2985, y: 6.8156, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1882467808}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1439.729}
@@ -1305,13 +1306,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882467806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.32436, y: 3.7470784, z: -3.9598427}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0023643256, w: -0.9999972}
+  m_LocalPosition: {x: 13.3209715, y: -0.33646804, z: -3.9598427}
+  m_LocalScale: {x: 0.13701467, y: 0.146722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 753123274}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7530778443889468303
 PrefabInstance:

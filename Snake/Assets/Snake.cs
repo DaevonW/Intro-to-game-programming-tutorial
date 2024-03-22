@@ -20,7 +20,7 @@ public class Snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MoveSnake", 0.1f, 0.1f); //Changed the speed of the ssnake
+        InvokeRepeating("MoveSnake", 0.05f, 0.05f); //Changed the speed of the snake
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class Snake : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)// make the snake bounce back from each wall
     {
         if (collision.gameObject.tag == "Food")
         {
@@ -86,7 +86,7 @@ public class Snake : MonoBehaviour
             //change score
             myManager.FoodEaten();
         }
-        else if (collision.gameObject.name == "Right Wall")
+        else if (collision.gameObject.name == "Right Wall") 
         {
             dir = Vector3.left;
         }

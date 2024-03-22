@@ -22,6 +22,8 @@ public class TurnOnandOffRepeated : MonoBehaviour
         TriangleObject.SetActive(!TriangleObject.activeInHierarchy); //activate Gameobject (obstacles)
        
     }
+      
+   
     // Update is called once per frame
     void Update()
     {

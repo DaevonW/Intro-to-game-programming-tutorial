@@ -25,11 +25,13 @@ public class SceneChanger : MonoBehaviour
 
 
         }
-        {
+        
         else if (sceneNumber == 1) ;
+        {
+
         }
         {
-            MainSceneControls()
+            MainSceneControls();
         }
         else if (sceneNumber == 2) ;
         

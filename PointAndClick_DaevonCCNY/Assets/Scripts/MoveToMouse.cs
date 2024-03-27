@@ -19,7 +19,7 @@ public class MoveToMouse : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("click to move");
-            target = Camera.man.ScreenToWorldPoint(Input.mousePosition);
+            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
           
         }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    //In Class CCNY WM
+    //IN CLASS CCNY WM
 
-    //Global Variables
+    //GLOBAL VARIABLES
     private bool isDragging = false;
-    private Vector3 offset;
+    private Vector3 offset; 
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Draggable : MonoBehaviour
     {
         if (isDragging)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition); +offset;
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
     }
 
@@ -29,7 +29,7 @@ public class Draggable : MonoBehaviour
     private void OnMouseDown()
     {
         //Debug.Log("mouse down");
-        offset = transform.position - Camera.main.ScreenTpWorldPoint(Input.mousePosition);
+        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isDragging = true;
         //Debug.Log("isDragging = " + isDragging);
     }
@@ -37,7 +37,9 @@ public class Draggable : MonoBehaviour
     //STOP DRAGGING
     private void OnMouseUp()
     {
-        Debug.Log("mouse up");
+        //Debug.Log("mouse up");
         isDragging = false;
+        //Debug.Log("isDragging = " + isDragging);
+
     }
 }

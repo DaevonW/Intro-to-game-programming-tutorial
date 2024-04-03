@@ -13,9 +13,16 @@ public class PlayerController : MonoBehaviour
 
     public float playerSpeed = 0.05f;
     public bool isJumping = false;
+
+    //player health
+    public int maxHealth = 20;
+    public int currentHealth;
+    public HealthBar healthBarScript;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthBarScript.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -54,5 +61,15 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+        
+        if(collision.gameObject.tag == "Lava")
+        {
+            TakeDamage(2);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBarScript.SetHealth(currentHealth);
     }
 }

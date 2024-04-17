@@ -54,11 +54,5 @@ public class Draggable : MonoBehaviour
 
     }
 
-    //Other things you might want to do with a draggable sprite!
-    //Keep the draggable sprites w/i the game scene using colliders as borders or hardcoding it in (like pong!)
-    //when the player drags a sprite into a certain area, do something! (change points, change scenes, destroy the sprite and make a new one, etc.)
-    //On Trigger Enter and On Collision will be your friends here!
-
-    //There is another drag scripting object that uses raycasting. We're not going to worry about that during this class, but if you're curious I'll send you a tutorial
-
+  
 }

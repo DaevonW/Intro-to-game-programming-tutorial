@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     //"flip" direction variables
     public bool flippedLeft; //keeps track of which way our sprite is currently facing
     public bool facingRight; //keeps track of which way our sprite should be facing
+    public bool facingLeft;
     void Start()
     {
         currentHealth = maxHealth;
@@ -43,15 +44,15 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("A pressed");
             newPos.x -= playerSpeed;
-            facingRight = false;
-            Flip(facingRight);
+            facingLeft = true;
+            Flip(facingLeft);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             //Debug.Log("D pressed");
             newPos.x += playerSpeed;
-            facingRight = false;
-            Flip(facingRight);
+            facingLeft = false;
+            Flip(facingLeft);
         }
         transform.position = newPos;
     }

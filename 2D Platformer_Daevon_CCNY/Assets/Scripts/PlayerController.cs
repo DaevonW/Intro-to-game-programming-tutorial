@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
     public bool flippedLeft; //keeps track of which way our sprite is currently facing
     public bool facingRight; //keeps track of which way our sprite should be facing
     public bool facingLeft;
+
+    //sound effect stuff
+    public AudioSource lavaRockAudio;
     void Start()
     {
         currentHealth = maxHealth;
@@ -74,6 +77,8 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Lava")
         {
             TakeDamage(2);
+
+            lavaRockAudio.Play();
         }
     }
     public void TakeDamage(int damage)

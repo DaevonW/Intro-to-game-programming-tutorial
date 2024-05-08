@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
-   public void GoToStartScene()
+   public void GoToPlatformer()
 {
-  SceneManager.LoadScene ("Start Scene");
+  SceneManager.LoadScene ("Platformer");
 }
 
 }

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public float playerSpeed = 0.05f;
     public bool isJumping = false;
+    public float jumpSpeed = 300f; //final change
+    private Rigidbody2D player; //final change
 
     //player health
     public int maxHealth = 20;
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBarScript.SetMaxHealth(maxHealth);
+        player = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -38,6 +42,11 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         Jump();
+
+        if(Input.GetButtonDown("Jump")) //final change
+        {
+                player.velocity = new Vector2(player.velocity.x, jumpSpeed);//final change
+        }
     }
 
     private void MovePlayer()

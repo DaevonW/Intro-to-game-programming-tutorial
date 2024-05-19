@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public bool isJumping = false;
     public float jumpSpeed = 300f; //final change
     private Rigidbody2D player; //final change
+    public Transform groundCheck;//indicates where the player is standing on
+    public float groundCheckRadius; //checks if the area around the player is overlapping what is considered the ground
+    public LayerMask groundLayer; //Specify's what is the ground
+    private bool isTouchingGround;
 
     //player health
     public int maxHealth = 20;
@@ -27,7 +31,7 @@ public class PlayerController : MonoBehaviour
     public bool facingRight; //keeps track of which way our sprite should be facing
     public bool facingLeft;
 
-    //sound effect stuff
+    //sound effect
     public AudioSource lavaRockAudio;
     void Start()
     {
@@ -43,10 +47,12 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         Jump();
 
-        if(Input.GetButtonDown("Jump")) //final change
+        if(Input.GetButtonDown("Jump") && isTouchingGround) //final change
         {
                 player.velocity = new Vector2(player.velocity.x, jumpSpeed);//final change
         }
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        //checks if the area around the player is overlapping what is considered the ground
     }
 
     private void MovePlayer()

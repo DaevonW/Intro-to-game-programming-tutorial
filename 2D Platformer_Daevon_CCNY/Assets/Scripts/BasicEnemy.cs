@@ -48,11 +48,7 @@ public class BasicEnemy : MonoBehaviour
         {
             //move to a patrol destination 0!
             transform.position = Vector3.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
-            //we've used MoveTowards in our Click To Move code!
-            //It needs 3 parameters: (current location, target location, the speed with with to move to the target location) 
-            //So this line says: transform the position of the enemy this script is on from the current position to the patrol point [position in arrary] at this speed multiplied by Time.deltaTime
-
-            //if the enemy gets reallyyyy close to the desired patrol point (like they're, basically there...)
+            
             if (Vector3.Distance(transform.position, patrolPoints[0].position) < 0.2f) //if the distance b/w these 2 objects is less than .2f...
                                                                                        //Distance calculates the distance b/w 2 objects
             {
@@ -67,11 +63,7 @@ public class BasicEnemy : MonoBehaviour
 
             //move to a patrol destination 1!
             transform.position = Vector3.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
-            //we've used MoveTowards in our Click To Move code!
-            //It needs 3 parameters: (current location, target location, the speed with with to move to the target location) 
-            //So this line says: transform the position of the enemy this script is on from the current position to the patrol point [position in arrary] at this speed multiplied by Time.deltaTime
-
-            //if the enemy gets reallyyyy close to the desired patrol point (like they're, basically there...)
+          
             if (Vector3.Distance(transform.position, patrolPoints[1].position) < 0.2f) //if the distance b/w these 2 objects is less than .2f...
                                                                                        //Distance calculates the distance b/w 2 objects
             {

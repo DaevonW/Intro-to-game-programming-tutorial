@@ -19,7 +19,7 @@ public class MovingObstacle : MonoBehaviour
 		  wayPoints = new Transform[ways.transform.childCount];
 		  for(int i = 0; i < ways.gameObject.transform.childCount; i++)
 		  {
-				wayPoints[i] = ways.transform.GetChild(i).gameObject.transform;
+				wayPoints[i] = ways.transform.GetChild(i).gameObject.transform; //go to points where the obstacle goes down and goes up
 
 		  }
    }

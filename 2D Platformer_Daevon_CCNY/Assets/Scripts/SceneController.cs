@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
        if(instance == null)
        {
               instance = this;
-              DontDestroyOnLoad(gameObject);
+              DontDestroyOnLoad(gameObject); //don't destroy pole when loading scene
        }
        else
        {
@@ -22,10 +22,10 @@ public class SceneController : MonoBehaviour
 
       public void EndScene()
       {
-      SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+      SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1); 
       }
 
-      public void LoadScene(string sceneName)
+      public void LoadScene(string sceneName) //load end scene
       {
            SceneManager.LoadSceneAsync(sceneName);
 

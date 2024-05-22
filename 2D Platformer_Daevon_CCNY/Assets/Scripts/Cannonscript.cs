@@ -21,7 +21,7 @@ public class Cannonscript : MonoBehaviour
     if (timebetween <= 0)
     {
         Instantiate(bullet,firepoint.position,firepoint.rotation);
-        timebetween = starttimebetween;
+        timebetween = starttimebetween; //timing of the bullet.
     }
     else
     {
